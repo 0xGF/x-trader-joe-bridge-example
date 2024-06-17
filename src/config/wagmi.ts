@@ -13,7 +13,7 @@ const { chains: wagmiChains, provider } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: "My RainbowKit App",
+  appName: "Bonsai SEED Bridge",
   chains: wagmiChains,
 });
 
