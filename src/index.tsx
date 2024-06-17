@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import {
   Bridge,
   bootstrap,
-  themeDark,
   themeLight,
   ThemeProvider,
   createWagmiProvider,

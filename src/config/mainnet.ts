@@ -1,17 +1,27 @@
-import {ChainId} from '@layerzerolabs/lz-sdk';
-import {Token} from '@layerzerolabs/x-trader-joe-bridge';
+import { ChainId } from "@layerzerolabs/lz-sdk";
+import { Token } from "@layerzerolabs/x-trader-joe-bridge";
+import { baseChain } from "./constants";
 
 const tokens = [
-  new Token(ChainId.BSC, '0x371c7ec6D8039ff7933a2AA28EB827Ffe1F52f07', 18, 'JOE'),
-  new Token(ChainId.ARBITRUM, '0x371c7ec6D8039ff7933a2AA28EB827Ffe1F52f07', 18, 'JOE'),
-  new Token(ChainId.AVALANCHE, '0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd', 18, 'JOE'),
+  new Token(
+    ChainId.ARBITRUM,
+    "0xcc14EcF814aAC6015bb38bc87296F28f8470eE13",
+    18,
+    "SEED"
+  ),
+  new Token(
+    baseChain.id,
+    "0x91d1043a63c8ad0fadd52a20ab1bbaf14c1bd1d0",
+    18,
+    "SEED"
+  ),
 ];
 
 const proxy = [
   {
-    chainId: ChainId.AVALANCHE,
-    address: '0x371c7ec6D8039ff7933a2AA28EB827Ffe1F52f07',
+    chainId: ChainId.ARBITRUM,
+    address: "0x91d1043a63c8ad0fadd52a20ab1bbaf14c1bd1d0",
   },
 ];
 
-export const mainnet = {tokens, proxy};
+export const testnet = { tokens, proxy };
